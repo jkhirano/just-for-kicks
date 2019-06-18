@@ -45,6 +45,22 @@ descrip2.style.display ='block';
 
 //4. Add events to the all the thumbs up icon that will add a count for each time the icon is clicked on for any shoe.
 
+let counter = document.getElementsByClassName('far fa-thumbs-up');
+// console.log(counter);
+for (let i = 0; i<counter.length; i++){
+    // console.log(counter[i]);
+    // counter[i].innerHTML = '0';
+    counter[i].addEventListener('click', countUp);
+    let counterBox = document.createElement('div');
+    counterBox.className = 'count1';
+    counter[i].appendChild(counterBox);
+}
+
+function countUp(){
+    let finalCount = this.querySelector('.count1');
+    finalCount.innerHTML++;
+}
+
 //5. Add an event to the plus icon that will increment the price of the Air Jordan V shoe each time the icon is clicked on.
 
 //6. Add an event to the minus icon that will decrement the price of the Air Jordan VI shoe each time the icon is clicked on.
