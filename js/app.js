@@ -3,8 +3,8 @@
 let alertBox = document.querySelector('#details');
 alertBox.addEventListener('click', showAlert);
 
-function showAlert(){
-alert ('Not Available in Hawaii.'); 
+function showAlert() {
+    alert('Not Available in Hawaii.');
 }
 
 //2. Add an event to the div element with the id of 'name1' that will show/hide the description ('descrip1') after hovering over Air Jordan II.
@@ -12,10 +12,10 @@ alert ('Not Available in Hawaii.');
 let showHideBox = document.querySelector('#name1');
 showHideBox.addEventListener('mouseover', showHide);
 
-function showHide(){
-    if (descrip1.style.display === 'none'){
+function showHide() {
+    if (descrip1.style.display === 'none') {
         descrip1.style.display = 'block';
-    }else{
+    } else {
         descrip1.style.display = 'none';
     }
 }
@@ -35,19 +35,19 @@ name2.appendChild(divElem);
 let showHideBox2 = document.querySelector('#name2');
 showHideBox2.addEventListener('click', showHide2);
 
-function showHide2(){
-if (descrip2.style.display === 'none'){
-descrip2.style.display ='block';
-}else{
-    descrip2.style.display = 'none';
-}
+function showHide2() {
+    if (descrip2.style.display === 'none') {
+        descrip2.style.display = 'block';
+    } else {
+        descrip2.style.display = 'none';
+    }
 }
 
 //4. Add events to the all the thumbs up icon that will add a count for each time the icon is clicked on for any shoe.
 
 let counter = document.getElementsByClassName('far fa-thumbs-up');
 // console.log(counter);
-for (let i = 0; i<counter.length; i++){
+for (let i = 0; i < counter.length; i++) {
     // console.log(counter[i]);
     // counter[i].innerHTML = '0';
     counter[i].addEventListener('click', countUp);
@@ -56,12 +56,20 @@ for (let i = 0; i<counter.length; i++){
     counter[i].appendChild(counterBox);
 }
 
-function countUp(){
+function countUp() {
     let finalCount = this.querySelector('.count1');
     finalCount.innerHTML++;
 }
 
 //5. Add an event to the plus icon that will increment the price of the Air Jordan V shoe each time the icon is clicked on.
+
+let price = document.getElementById('increase');
+price.addEventListener('click', increasePrice);
+
+function increasePrice() {
+    let jordanCounter = document.getElementById('price4');
+    jordanCounter.childNodes[0].textContent++;
+}
 
 //6. Add an event to the minus icon that will decrement the price of the Air Jordan VI shoe each time the icon is clicked on.
 
