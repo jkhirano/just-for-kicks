@@ -76,7 +76,7 @@ function increasePrice() {
 let price2 = document.getElementById('decrease');
 price2.addEventListener('click', decreasePrice);
 
-function decreasePrice(){
+function decreasePrice() {
     let jCounter = document.getElementById('price5');
     jCounter.childNodes[0].textContent--;
 }
@@ -91,9 +91,12 @@ let jImage = jBlock[1].querySelector('img');
 
 jImage.addEventListener('mouseover', changeColor);
 
-function changeColor(){
-    // let jordanColor = getElementByTagName('img');
-    jImage.style.filter = "hue-rotate(70deg)"; 
+function changeColor() {
+    if (jImage.style.filter === 'hue-rotate(0deg)'){
+        jImage.style.filter = 'hue-rotate(70deg)';
+    } else {
+        jImage.style.filter = 'hue-rotate(0deg)';
+    }
 }
 
 //8. Add an event to the Air Jordan XII shoe that will increase the image by 50% after clicking on the image.
