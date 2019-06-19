@@ -99,7 +99,22 @@ function changeColor() {
     }
 }
 
+// ^ STILL NEED TO FIGURE OUT HOW TO CHANGE COLOR ONLY DURING HOVER
+
 //8. Add an event to the Air Jordan XII shoe that will increase the image by 50% after clicking on the image.
+
+let xBlock = document.querySelectorAll('.block1');
+// console.log(xBlock);
+
+let xImage = xBlock[2].querySelector('img');
+// console.log(xImage);
+
+xImage.addEventListener('click', enlargePic);
+
+function enlargePic(){
+xImage.style.width = this.width + this.height * 0.5 + 'px';
+xImage.style.height = this.height + this.width * 0.5 + 'px'; 
+}
 
 //9. Add events to both the plus and minus icon that will add or decrease the price each time the respective icon is clicked on.
 
