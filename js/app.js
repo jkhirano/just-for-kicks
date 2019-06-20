@@ -68,8 +68,12 @@ price.addEventListener('click', increasePrice);
 
 function increasePrice() {
     let jordanCounter = document.getElementById('price4');
+    // console.log('price4', jordanCounter.childNodes)
     jordanCounter.childNodes[0].textContent++;
 }
+
+// TO ADD BY X AMOUNT, CHANGE STRING INTO A NUMBER USING PARSEFLOAT
+// LET [VAR NAME] = PARSEFLOAT(JORDANCOUNTER.CHILDNODES[0].DATA + 1000)
 
 //6. Add an event to the minus icon that will decrement the price of the Air Jordan VI shoe each time the icon is clicked on.
 
@@ -135,3 +139,15 @@ function minusDolla(){
 }
 
 //10. Add an event to the Air Jordan XXVIII shoe that will show the famous 'crying Michael Jordan' meme after clicking on the image.
+
+let showMichael = document.querySelectorAll('.block3');
+// console.log(showMichael);
+
+let showMImage = showMichael[2].querySelector('img');
+// console.log(showMImage);
+
+showMImage.addEventListener('click', MikeMeme);
+
+function MikeMeme(){
+    if (Img.src === 'https://www.flightclub.com/media/catalog/product/cache/1/image/1600x1140/9df78eab33525d08d6e5fb8d27136e95/a/i/air-jordan-28-photo-blue-white-black-011977_1.jpg')
+}
